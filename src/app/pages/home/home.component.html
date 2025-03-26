@@ -1,6 +1,6 @@
 <mat-drawer-container
     [autosize]="true"
-    class="min-h-full max-w-7xl mx-auto border-x bg-red-600"
+    class="min-h-full max-w-7xl border-x bg-red-600"
 >
     <mat-drawer mode="side" opened class="p-6">
         <div>
@@ -8,6 +8,9 @@
         </div>
     </mat-drawer>
     <mat-drawer-content class="p-6">
-        <app-products-header></app-products-header>
+        <app-products-header
+            (columnsCountChange)="onColumnsCountChange($event)"
+        ></app-products-header>
+        {{ cols }}
     </mat-drawer-content>
 </mat-drawer-container>

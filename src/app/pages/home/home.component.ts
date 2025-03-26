@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { ProductsHeaderComponent } from "./components/products-header/products-header.component";
@@ -10,6 +10,12 @@ import { ProductsHeaderComponent } from "./components/products-header/products-h
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+    cols = 3;
 
+    ngOnInit(): void { }
+
+    onColumnsCountChange(colsNumber: number): void {
+        this.cols = colsNumber
+    }
 }
