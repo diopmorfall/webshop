@@ -1,0 +1,25 @@
+<mat-card [ngClass]="{'text-center': !fullWidthMode}"> 
+    <div class="bg-white text-black" [ngClass]="{'flex p-3': fullWidthMode}">
+        <img class="mx-auto"
+            [ngClass]="{'h-[200px], mb-1': !fullWidthMode, 'h-[360px]' : fullWidthMode}"
+            src="https://placehold.co/150x200"
+            alt="">
+        <div class="w-full"
+            [ngClass]="{'px-8 flex flex-col justify-between': fullWidthMode}"
+        >
+            <div>
+                <h4>Manga</h4>
+                <p class="truncate hover:whitespace-normal">DanDaDan</p>
+                <p *ngIf="fullWidthMode">Plot</p>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-red-400">
+                    {{ '12' | currency }}
+                </span>
+                <button>
+                    <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</mat-card>
